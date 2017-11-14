@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import Velleman3x4keypad
+
+
+duwknopje = Velleman3x4keypad.KeyPad()
+duwknopje.GetKey()
+print(duwknopje.PushedButton)
+
+
