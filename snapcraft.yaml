@@ -1,0 +1,23 @@
+name: my-first-program 
+version: "0.1" 
+summary: First attempt to snap
+description: |
+  This is a test of the new snap mechanism.
+
+grade: devel 
+confinement: devmode 
+
+apps:
+  keypad:
+    command: bin/keypad
+  Velleman3x4keypad:
+    command: Velleman3x4keypad
+  checkkeyboard:
+    command: checkkeyboard
+
+parts:
+  my-first-program:
+    source: https://github.com/HenkUyttenhove/python.git 
+    plugin: dump    # dump = copieren, python = installeren 
+    stage-packages: 
+      - python-smbus
